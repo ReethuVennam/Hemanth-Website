@@ -5,6 +5,7 @@ export const About = () => {
     <section id="about" className="py-32 relative">
       <div className="mx-auto max-w-6xl px-6">
         <motion.div
+        
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
