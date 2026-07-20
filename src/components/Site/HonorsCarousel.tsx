@@ -6,6 +6,7 @@ import doctorate from "@/assets/gallery/doctorate.png";
 import iim from "@/assets/gallery/iim.jpeg";
 import handover from "@/assets/gallery/handover.jpeg";
 import team from "@/assets/gallery/team.jpeg";
+import finalimage from "@/assets/gallery/finalimage.png";
 
 const slides = [
   { src: doctorate, caption: "Honorary Doctorate — FinTech, AI & Blockchain" },
@@ -14,6 +15,7 @@ const slides = [
   { src: iim, caption: "IIM Lucknow — Startup Mentorship" },
   { src: handover, caption: "SabbPe Merchant Rollout" },
   { src: team, caption: "Leadership & Team" },
+  { src: finalimage, caption: "", hideCaption: true },
 ];
 
 export const HonorsCarousel = () => {
@@ -61,12 +63,14 @@ export const HonorsCarousel = () => {
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                <p className="text-[10px] uppercase tracking-[0.25em] text-primary mb-2">Milestone</p>
-                <h3 className="font-display text-xl md:text-2xl leading-tight">
-                  {slides[index].caption}
-                </h3>
-              </div>
+              {!slides[index].hideCaption && (
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-primary mb-2">Milestone</p>
+                  <h3 className="font-display text-xl md:text-2xl leading-tight">
+                    {slides[index].caption}
+                  </h3>
+                </div>
+              )}
             </motion.div>
           </AnimatePresence>
 

@@ -21,7 +21,7 @@ export const About = () => {
           </div>
           <div className="lg:col-span-7 lg:col-start-6 space-y-6 text-muted-foreground leading-relaxed">
             <p className="text-lg text-foreground/90">
-              Over 18 years across Digital Payments, Banking, SME Lending, Merchant Acquiring, and
+              Over 20+ years experience across Digital Payments, Banking, SME Lending, Merchant Acquiring, and
               Government-led technology initiatives — building and scaling payment ecosystems
               across diverse markets.
             </p>

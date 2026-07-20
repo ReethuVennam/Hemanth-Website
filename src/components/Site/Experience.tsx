@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Ventures } from "@/components/Site/Ventures";
 
 const roles = [
   { role: "Chief Executive Officer", company: "One78 SabbPe Technology Solutions", time: "Jul 2024 – Present", current: true, desc: "Building a strong digital payments ecosystem across offline and online platforms — PSP Module, UPI Elite QuickPay, Integrated & Non-Integrated EDC, and card programs." },
@@ -28,10 +29,12 @@ export const Experience = () => {
         >
           <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4">— Experience</p>
           <h2 className="font-display text-4xl lg:text-5xl leading-[1.05] tracking-tight">
-            Eighteen years.{" "}
+            Twenty Years{" "}
             <span className="italic text-gradient-gold">A trajectory of trust.</span>
           </h2>
         </motion.div>
+
+        <Ventures />
 
         <div className="relative">
           {/* vertical line */}
