@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Ventures } from "@/components/Site/Ventures";
 
 const roles = [
-  { role: "Chief Executive Officer", company: "One78 SabbPe Technology Solutions", time: "Jul 2024 – Present", current: true, desc: "Building a strong digital payments ecosystem across offline and online platforms — PSP Module, UPI Elite QuickPay, Integrated & Non-Integrated EDC, and card programs." },
+  { role: "Founder & Executive CEO", company: "One78 SabbPe Technology Solutions", time: "Jul 2024 – Present", current: true, desc: "Building a strong digital payments ecosystem across offline and online platforms — PSP Module, UPI Elite QuickPay, Integrated & Non-Integrated EDC, and card programs." },
   { role: "Startup Mentor — MAARG", company: "Startup India", time: "Aug 2023 – Present", current: true, desc: "Mentoring early-stage startups on business models, technology, GTM and compliance — improving readiness for funding and scale." },
   { role: "Independent Consultant", company: "Self-Employed", time: "Jan 2024 – Present", current: true, desc: "Strategic advisory for startups and MSMEs — combining deep industry knowledge, market research, and trend analysis to shape GTM and growth roadmaps." },
   { role: "Executive Director", company: "Cito Nidhi Limited", time: "Dec 2023 – Jul 2024", desc: "Built business operations and regulatory coordination across lending and insurance domains." },

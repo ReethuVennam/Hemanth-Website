@@ -1,6 +1,17 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Calendar, MapPin, Briefcase } from "lucide-react";
 import portrait from "@/assets/hero-portrait.png";
+import sabbpe from "@/assets/ventures/sabbpe.jpeg";
+import karatly from "@/assets/ventures/karatly.png";
+import uaip from "@/assets/ventures/uaip.png";
+import gift360 from "@/assets/ventures/gift360.jpeg";
+
+const ventureLogos = [
+  { name: "SabbPe", src: sabbpe },
+  { name: "Karatly", src: karatly },
+  { name: "UAIP.AI", src: uaip },
+  { name: "Gift360", src: gift360 },
+];
 
 const stats = [
   { value: "20+",label: "Years in Fintech" },
@@ -46,10 +57,20 @@ export const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="text-lg sm:text-xl text-muted-foreground max-w-xl"
               >
-                CEO of <span className="text-foreground">One78 SabbPe Technology Solutions</span>.
-                Architecting the next chapter of digital payments across global markets through
-                <span className="text-primary"> 20 years</span> of fintech leadership.
+                Founder and Executive CEO of <span className="text-foreground">One78 SabbPe Technology Solutions</span>.
               </motion.p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-5" aria-label="Founder ventures">
+              {ventureLogos.map((venture) => (
+                <img
+                  key={venture.name}
+                  src={venture.src}
+                  alt={venture.name}
+                  title={venture.name}
+                  className="h-10 w-24 object-contain"
+                />
+              ))}
             </div>
 
             <motion.div
@@ -84,7 +105,7 @@ export const Hero = () => {
                 <div className="flex items-center gap-1.5 text-xs text-muted-foreground uppercase tracking-wider mb-1">
                   <MapPin className="w-3 h-3" /> Location
                 </div>
-                <p className="text-sm">Gurugram, IN</p>
+                <p className="text-sm">Dubai, UAE</p>
               </div>
               <div>
                 <div className="flex items-center gap-1.5 text-xs text-muted-foreground uppercase tracking-wider mb-1">
@@ -96,7 +117,7 @@ export const Hero = () => {
                 <div className="flex items-center gap-1.5 text-xs text-muted-foreground uppercase tracking-wider mb-1">
                   <Calendar className="w-3 h-3" /> Status
                 </div>
-                <p className="text-sm">Active CEO</p>
+                <p className="text-sm">Active</p>
               </div>
             </motion.div>
           </div>
@@ -111,7 +132,7 @@ export const Hero = () => {
             <div className="relative w-full max-w-md mx-auto">
               <img
                 src={portrait}
-                alt="Dr. Hemanth Veeramalla, CEO of One78 SabbPe Technology Solutions"
+                alt="Dr. Hemanth Veeramalla, Founder and Executive CEO of One78 SabbPe Technology Solutions"
                 className="w-full h-auto object-contain"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
@@ -119,7 +140,7 @@ export const Hero = () => {
                 <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                 <div className="text-xs">
                   <p className="text-foreground">Currently building</p>
-                  <p className="text-muted-foreground">AI, Fintech, D2C, EduTech</p>
+                  <p className="text-muted-foreground">AI, Fintech</p>
                 </div>
               </div>
             </div>

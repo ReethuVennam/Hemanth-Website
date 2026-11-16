@@ -3,15 +3,32 @@ import { motion, AnimatePresence } from "framer-motion";
 import doctorate from "@/assets/gallery/doctorate.png";
 import award1 from "@/assets/gallery/award1.jpeg";
 import award2 from "@/assets/gallery/award2.jpeg";
+import award3 from "@/assets/gallery/award3.jpeg";
+import award4 from "@/assets/gallery/award4.jpeg";
+import award5 from "@/assets/gallery/award5.jpeg";
+import award6 from "@/assets/gallery/award6.jpeg";
+import award7 from "@/assets/gallery/award7.png";
 import iim from "@/assets/gallery/iim.jpeg";
 import handover from "@/assets/gallery/handover.jpeg";
 import team from "@/assets/gallery/team.jpeg";
 import finalimage from "@/assets/gallery/finalimage.png";
 
-const slides = [
+type Slide = {
+  src: string;
+  caption: string;
+  hideCaption?: boolean;
+  fit?: "contain";
+};
+
+const slides: Slide[] = [
   { src: doctorate, caption: "Honorary Doctorate — FinTech, AI & Blockchain" },
   { src: award1, caption: "WCEPC Recognition Ceremony" },
   { src: award2, caption: "Certificate of Excellence" },
+  { src: award3, caption: "Award recognition", hideCaption: true },
+  { src: award4, caption: "Award recognition", hideCaption: true },
+  { src: award5, caption: "Award recognition", hideCaption: true },
+  { src: award6, caption: "Award recognition", hideCaption: true },
+  { src: award7, caption: "Award recognition", hideCaption: true, fit: "contain" },
   { src: iim, caption: "IIM Lucknow — Startup Mentorship" },
   { src: handover, caption: "SabbPe Merchant Rollout" },
   { src: team, caption: "Leadership & Team" },
@@ -54,14 +71,16 @@ export const Highlights = () => {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.96, y: -10 }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-[92%] md:w-[50%] aspect-[16/10] rounded-3xl overflow-hidden z-10"
+              className="relative w-[92%] md:w-[50%] aspect-[16/10] rounded-3xl overflow-hidden bg-background z-10"
             >
               <img
                 src={slides[index].src}
                 alt={slides[index].caption}
-                className="w-full h-full object-cover"
+                className={`w-full h-full ${slides[index].fit === "contain" ? "object-contain" : "object-cover"}`}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
+              {slides[index].fit !== "contain" && (
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
+              )}
               {!slides[index].hideCaption && (
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                   <p className="text-[10px] uppercase tracking-[0.25em] text-primary mb-2">Milestone</p>

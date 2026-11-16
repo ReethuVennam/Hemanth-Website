@@ -31,7 +31,7 @@ export const About = () => {
               executive leadership programs from IIM Raipur and HarvardX.
             </p>
             <p>
-              As CEO of One78 SabbPe Technology Solutions, leads strategic initiatives in payment
+              As Founder and Executive CEO of One78 SabbPe Technology Solutions, leads strategic initiatives in payment
               technology and digital transformation — building secure, scalable, and future-ready
               financial solutions across international markets.
             </p>

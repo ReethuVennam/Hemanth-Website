@@ -12,10 +12,10 @@ import { useEffect } from "react";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Dr. Hemanth Veeramalla — CEO, Fintech Leader";
+    document.title = "Dr. Hemanth Veeramalla — Founder & Executive CEO, Fintech Leader";
     const meta = document.querySelector('meta[name="description"]');
     const content =
-      "Dr. Hemanth Veeramalla — CEO of One78 SabbPe Technology Solutions. 20+ years experience scaling digital payments, lending, and fintech ecosystems globally.";
+      "Dr. Hemanth Veeramalla — Founder and Executive CEO of One78 SabbPe Technology Solutions. 20+ years experience scaling digital payments, lending, and fintech ecosystems globally.";
     if (meta) meta.setAttribute("content", content);
     else {
       const m = document.createElement("meta");

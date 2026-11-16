@@ -90,7 +90,7 @@ export const Contact = () => {
             <div className="glass rounded-2xl p-6">
               <MapPin className="w-5 h-5 text-primary mb-3" />
               <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">Location</p>
-              <p className="font-medium">Gurugram, Haryana, India</p>
+              <p className="font-medium">Dubai, UAE</p>
             </div>
             <div className="glass rounded-2xl p-6">
               <p className="text-xs uppercase tracking-wider text-muted-foreground mb-3">Pillars</p>
